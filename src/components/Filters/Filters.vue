@@ -17,16 +17,28 @@
 		
 		<label for="boardgamefamily">Boardgamefamily</label>
 		<DropdownFilter dropdownid="boardgamefamily" :list="list.boardgamefamily" ref="boardgamefamily" />
+
+		<label for="playtime">Playtime</label>
+		<RangesliderFilter sliderid="playtime" :list="list.playtime" :hist="list.playtimehist" ref="playtime" />
+		
+		<label for="numplayers">Num players</label>
+		<RangesliderFilter sliderid="numplayers" :list="list.numplayers" :hist="list.numplayershist" pips="true" ref="numplayers" />
+		
+		<label for="playtime">Year published</label>
+		<RangesliderFilter sliderid="yearpublished" :list="list.yearpublished" :hist="list.yearpublishedhist" pips="true" ref="yearpublished" />
+ 
 	</div>
 </template>
 
 <script>
 	import DropdownFilter from '@/components/Filters/DropdownFilter.vue'
+	import RangesliderFilter from '@/components/Filters/RangesliderFilter.vue'
 	
 	export default {
 		//name: "Filters",
 		components: {
-			'DropdownFilter': DropdownFilter
+			'DropdownFilter': DropdownFilter,
+			'RangesliderFilter': RangesliderFilter
 		},
 		created: function(){
 		console.log("Created!");

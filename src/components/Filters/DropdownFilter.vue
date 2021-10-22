@@ -37,6 +37,7 @@
 			resetdropdown(){
 				console.log("Reset dropdown!");
 				//this.tomSelect.setValue("All");
+				this.$refs.select.value = -1;
 			}
 		}
 	}
